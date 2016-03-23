@@ -1,0 +1,18 @@
+<ion-view view-title="Music">
+
+  <ion-content >
+	
+    <ion-list   ng-controller="ChatsCtrl">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in musics" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+       
+        <p>{{chat.album}}</p>
+        
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
