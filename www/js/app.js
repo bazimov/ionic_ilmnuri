@@ -43,6 +43,16 @@ angular.module('starter', ['ngCordova', 'ionic', 'ionic-audio', 'starter.control
     }
   })
 
+  .state('tab.dash-detail', {
+    url: '/dash/:dashId',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/dash-detail.html',
+        controller: 'DashDetailCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -52,6 +62,7 @@ angular.module('starter', ['ngCordova', 'ionic', 'ionic-audio', 'starter.control
         }
       }
     })
+
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
@@ -68,6 +79,16 @@ angular.module('starter', ['ngCordova', 'ionic', 'ionic-audio', 'starter.control
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
         controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.account-detail', {
+    url: '/account/:accountId',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/account-detail.html',
+        controller: 'AccountDetailCtrl'
       }
     }
   });

@@ -1,7 +1,11 @@
-<ion-view view-title="Account">
+<ion-view view-title="Ayyubxon Domla">
   <ion-content>
-    <ion-list>
-        <h3 class="padding">Music Application<h3>
+    <ion-list ng-controller="AccountCtrl">
+      <ion-item class="item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="account in musics2" type="item-text-wrap" href="#/tab/account/{{account.id}}">
+        <i class="icon ion-headphone"></i>
+        <h2>{{account.album.replace('_', ' ')}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

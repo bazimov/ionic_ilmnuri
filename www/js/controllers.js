@@ -1,7 +1,23 @@
 angular.module('starter.controllers', ['ionic', 'ionic-audio'])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl',['$scope', '$http', function($scope , $http) {
 
+	$http.get('http://api.azimov.xyz/api/ios/albums/AbuNur/').success( function(response){
+
+		$scope.musics1 = response.albums;
+
+	});
+
+}])
+
+.controller('DashDetailCtrl', function($scope, $http, $stateParams, Dashs, $ionicModal, $cordovaMedia) {
+$scope.dashMusicId=$stateParams.dashId;
+ $http.get('http://api.azimov.xyz/api/ios/albums/AbuNur/').success( function(response){
+
+		$scope.musics1 = response.albums;
+
+	});
+})
 
 .controller('ChatsCtrl',['$scope', '$http', function($scope , $http) {
 
@@ -22,29 +38,23 @@ $scope.musicId=$stateParams.chatId;
 
 	});
 
-
-   /*play online music*/
-   $scope.playWebAudio = function(musicTitle)
-  {
-  	 var url='http://s3.amazonaws.com/api.ilmnuri.com/Abdulloh/'+musicTitle;
-    try{
-      $scope.audio = new Audio(url);
-      $scope.audio.play();
-    }
-    catch(e){
-      alert(e);
-    }
-  };
-
-  $scope.stopWeb = function()
-  {
-    $scope.audio.pause();
-  };
-
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+.controller('AccountCtrl',['$scope', '$http', function($scope , $http) {
+
+	$http.get('http://api.azimov.xyz/api/ios/albums/Ayyubxon/').success( function(response){
+
+		$scope.musics2 = response.albums;
+
+	});
+
+}])
+
+.controller('AccountDetailCtrl', function($scope, $http, $stateParams, Accounts, $ionicModal, $cordovaMedia) {
+$scope.accountMusicId=$stateParams.accountId;
+ $http.get('http://api.azimov.xyz/api/ios/albums/Ayyubxon/').success( function(response){
+
+		$scope.musics2 = response.albums;
+
+	});
 });

@@ -1,17 +1,10 @@
-<ion-view view-title="Music">
-
-  <ion-content >
-	
-    <ion-list   ng-controller="ChatsCtrl">
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in musics" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-       
-        <p>{{chat.album}}</p>
-        
+<ion-view view-title="Abdulloh Domla">
+  <ion-content>
+    <ion-list ng-controller="ChatsCtrl">
+      <ion-item class="item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="chat in musics" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <i class="icon ion-headphone"></i>
+        <h2>{{chat.album.replace('_', ' ')}}</h2>
         <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
       </ion-item>
     </ion-list>
   </ion-content>
