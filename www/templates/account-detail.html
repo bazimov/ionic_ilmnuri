@@ -5,8 +5,9 @@
       <ion-audio-track ng-repeat="track in item.items" track="track">
         <div class="card">
            <div class="item item-thumbnail-left">
-             <img src="img/logo.png">
-             <h2>{{track.name.replace('.mp3','')|removeUnderscores}}</h2>
+             <img src="img/ayyubxon.png">
+             <h2>{{ track.name.replace('.mp3','') | removeUnderscores }}</h2>
+             <p>Darslik: {{ item.album | removeUnderscores }}</p>
              <ion-audio-controls>
                <a class="button button-icon icon" ion-audio-play></a>
                <ion-spinner icon="ios" style="position: relative; top: 8px; left: 4px"></ion-spinner>
