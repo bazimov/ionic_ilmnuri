@@ -4,16 +4,16 @@
     <ion-list ng-repeat="item in musics1" ng-if="item.id==dashMusicId">
       <ion-audio-track ng-repeat="track in item.items" track="track">
         <div class="card">
-           <div class="item item-thumbnail-left">
-             <img src="img/abunur.png">
-             <h2>{{ track.name.replace('.mp3','') | removeUnderscores }}</h2>
-             <p>Darslik: {{ item.album | removeUnderscores }}</p>
-             <ion-audio-controls>
-               <a class="button button-icon icon" ion-audio-play></a>
-               <ion-spinner icon="ios" style="position: relative; top: 8px; left: 4px"></ion-spinner>
-             </ion-audio-controls>
-           </div>
-           <div class="item item-divider">
+             <div class="item item-thumbnail-left">
+               <img src="img/abunur.png">
+               <h2>{{ track.name.replace('.mp3','') | removeUnderscores }}</h2>
+               <p>Darslik: {{ item.album | removeUnderscores }}</p>
+               <ion-audio-controls>
+                 <a class="button button-icon icon" ion-audio-play></a>
+                 <ion-spinner icon="ios" style="position: relative; top: 8px; left: 4px"></ion-spinner>
+               </ion-audio-controls>
+             </div>
+             <div class="item item-divider">
              <ion-audio-progress-bar track="track" display-time></ion-audio-progress-bar>
            </div>
          </div>
