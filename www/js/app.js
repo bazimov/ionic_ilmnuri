@@ -1,4 +1,4 @@
-angular.module('starter', ['ngCordova', 'ionic', 'ionic-audio', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ngCordova', 'ionic', 'ionic-audio', 'starter.controllers', 'starter.services', 'filters.underscore'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

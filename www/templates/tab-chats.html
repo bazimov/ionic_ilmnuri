@@ -3,7 +3,7 @@
     <ion-list ng-controller="ChatsCtrl">
       <ion-item class="item-remove-animate item-avatar item-icon-left item-icon-right" ng-repeat="chat in musics" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
         <i class="icon ion-headphone"></i>
-        <h2>{{chat.album.replace('_', ' ')}}</h2>
+        <h2>{{ chat.album | removeUnderscores }}</h2>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>
