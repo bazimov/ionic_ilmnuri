@@ -57,4 +57,19 @@ $scope.accountMusicId=$stateParams.accountId;
 		$scope.musics2 = response.albums;
 
 	});
+})
+//trying out alert pupup
+.controller('PopupCtrl', function($scope, $ionicPopup, $timeout) {
+	$scope.data = {}
+
+	// Triggered on a button click, or some other target
+	$scope.showPopup = function() {
+		var alertPopup = $ionicPopup.alert({
+			title: 'App haqida',
+			template: 'Assalomu Alaykum hurmatli tolibi ilm! Mazkur ma\'ruzalardan Allohning roziligi yo\'lida foydalanishda hech qanday huquqiy chegara yo\'q. Biroq darslardan tijoriy va boshqa dunyoviy maqsadlarda foydalanish mumkin emas. Email: ilmnuri@ilmnuri.com Texnik nosozliklar haqida bizga habar qiling. www.ilmnuri.com'
+		});
+		alertPopup.then(function(res) {
+			console.log('Thank you for not eating my delicious ice cream cone');
+		});
+	};
 });
